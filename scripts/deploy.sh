@@ -8,6 +8,13 @@ export ECS_TASK=$IMAGE_NAME-task
 # install dependencies
 sudo apt-get install jq -y #install jq for json parsing
 sudo apt-get install gettext -y 
+
+
+sudo apt-get install software-properties-common -y 
+sudo add-apt-repository ppa:deadsnakes/ppa -y 
+sudo apt-get update -y 
+sudo apt-get install python3.6 -y 
+
 pip install --user awscli # install aws cli w/o sudo
 export PATH=$PATH:$HOME/.local/bin # put aws in the path
 
